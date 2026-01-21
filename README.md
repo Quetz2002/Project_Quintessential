@@ -1,53 +1,70 @@
-Project Quintessential
+# 🎮 Project Quintessential
 
-Project Quintessential es un proyecto de videojuego multijugador en línea enfocado en el terror y la supervivencia.
-La idea principal es que varios jugadores cooperen (o sobrevivan individualmente) para escapar de una zona específica, enfrentándose a amenazas y situaciones de alto riesgo.
+> Un videojuego multijugador de terror y supervivencia desarrollado en Unity
 
-🎮 Concepto del Juego
+Project Quintessential es un proyecto de videojuego multijugador en línea enfocado en el terror y la supervivencia. La idea principal es que varios jugadores cooperen (o sobrevivan individualmente) para escapar de una zona específica, enfrentándose a amenazas y situaciones de alto riesgo.
 
-Género: Terror / Supervivencia
+## 🎯 Concepto del Juego
 
-Modalidad: Multijugador en línea
+| Aspecto | Descripción |
+|---------|-------------|
+| **Género** | Terror / Supervivencia |
+| **Modalidad** | Multijugador en línea |
+| **Plataforma** | Unity 3D |
 
-Objetivo principal:
+### Objetivos Principales
 
-Sobrevivir
+- 🏃‍♂️ **Sobrevivir** - Mantente con vida ante las amenazas
+- 🔍 **Explorar** - Descubre los secretos del área
+- 🚪 **Escapar** - Encuentra la salida del área designada
 
-Explorar
-
-Escapar del área designada
-
-🛠️ Implementación Técnica
+## 🛠️ Implementación Técnica
 
 El sistema multijugador se está desarrollando utilizando las siguientes herramientas de Unity:
 
-Netcode for GameObjects
+### Tecnologías Utilizadas
 
-Multiplayer Play Mode
+- **[Netcode for GameObjects](https://docs.unity3d.com/Packages/com.unity.netcode.gameobjects@latest/)** - Sistema de red principal
+- **[Multiplayer Play Mode](https://docs.unity3d.com/Packages/com.unity.multiplayer.playmode@latest/)** - Testing multijugador
 
-Estas herramientas permiten:
+### Características del Sistema
 
-Instanciar dos o más jugadores independientes
+✅ Instanciar dos o más jugadores independientes  
+✅ Compartir un mismo código base  
+✅ Manejar correctamente la lógica de red  
 
-Compartir un mismo código base
+## 🔁 Lógica de Red
 
-Manejar correctamente la lógica de red
+### Arquitectura de Red
 
-🔁 Lógica de Red
+Para el manejo del multijugador se implementa:
 
-Para el manejo del multijugador:
+```csharp
+// Cambio de herencia base
+MonoBehaviour → NetworkBehaviour
+```
 
-Se cambia la herencia de MonoBehaviour a NetworkBehaviour
+### Sistema de Validación
 
-Se implementa una lógica de validación para:
+El sistema incluye validación para:
 
-Verificar qué jugador es el propietario del objeto
+- ✅ **Verificar propietario** - Qué jugador es el propietario del objeto
+- ✅ **Control exclusivo** - Solo el jugador correcto puede moverse o ejecutar acciones  
+- ✅ **Prevención de conflictos** - Evitar conflictos de control entre instancias
 
-Asegurar que solo el jugador correcto pueda moverse o ejecutar acciones
+## 🚧 Estado del Proyecto
 
-Evitar conflictos de control entre instancias
+> **Fase:** Desarrollo Temprano
 
-🚧 Estado del Proyecto
+Este es todo el progreso realizado hasta el momento. El proyecto se encuentra en fase temprana de desarrollo y continuará expandiéndose en futuras iteraciones.
 
-Este es todo el progreso realizado hasta el momento.
-El proyecto se encuentra en fase temprana de desarrollo y continuará expandiéndose en futuras iteraciones.
+### Próximos Pasos
+
+- [ ] Implementar mecánicas de terror
+- [ ] Desarrollar sistema de supervivencia
+- [ ] Crear mapas y escenarios
+- [ ] Añadir elementos de escape
+
+---
+
+**Desarrollado con ❤️ usando Unity**
