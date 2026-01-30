@@ -52,6 +52,14 @@ El sistema incluye validación para:
 - ✅ **Control exclusivo** - Solo el jugador correcto puede moverse o ejecutar acciones  
 - ✅ **Prevención de conflictos** - Evitar conflictos de control entre instancias
 
+### Objetos coleccionables
+
+Se añadieron funciones para poder recoger un objeto al presionar la tecla E,
+esta interacción con dicho objeto se observara en ambos juegos  es decir
+que si el host interactua con el objeto el cliente ya no podra interactuar con el mismo
+lo mismo pasa a la inversa, si el cliente interactua con el objeto antes que el host el mismo
+ya no podrá interactuar con el objeto en cuestión.
+
 ## 🚧 Estado del Proyecto
 
 > **Fase:** Desarrollo Temprano
