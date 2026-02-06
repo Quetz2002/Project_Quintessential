@@ -8,6 +8,7 @@ public class PlayerMovement : NetworkBehaviour
     private void Update()
     {
         if (!IsOwner) return;
+
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
@@ -19,8 +20,8 @@ public class PlayerMovement : NetworkBehaviour
         {
             TryToCollect();
         }
-    
     }
+
     [ServerRpc]
     void MoveServerRPC(Vector3 move)
     {
