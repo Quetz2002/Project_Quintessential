@@ -158,16 +158,6 @@ El proyecto cuenta con un sistema multijugador funcional con mecánicas básicas
 - [ ] Añadir efectos de sonido y música
 - [ ] Mejorar la UI y feedback visual
 
-## 🤝 Contribuir
-
-Este es un proyecto en desarrollo activo. Si deseas contribuir:
-
-1. Haz fork del repositorio
-2. Crea una rama para tu feature (`git checkout -b feature/nueva-caracteristica`)
-3. Commit tus cambios (`git commit -m 'Añade nueva característica'`)
-4. Push a la rama (`git push origin feature/nueva-caracteristica`)
-5. Abre un Pull Request
-
 ---
 
 **Desarrollado con ❤️ usando Unity**
