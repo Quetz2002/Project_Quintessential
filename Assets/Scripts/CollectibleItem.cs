@@ -3,12 +3,10 @@ using Unity.Netcode;
 
 public class CollectibleItem : NetworkBehaviour
 {
+
     private Renderer rend;
 
-    public NetworkVariable<bool> isCollected = new NetworkVariable<bool>(
-        false,
-        NetworkVariableReadPermission.Everyone,
-        NetworkVariableWritePermission.Server);
+    public NetworkVariable<bool> isCollected = new NetworkVariable<bool>(false, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
 
     private void Awake()
     {
@@ -19,15 +17,15 @@ public class CollectibleItem : NetworkBehaviour
     {
         UpdateVisual(isCollected.Value);
 
-        isCollected.OnValueChanged += OnCollectedChange;
+        isCollected.OnValueChanged += OnCollectedChanged;
     }
 
-    void OnCollectedChange(bool old, bool newValue)
+    void OnCollectedChanged(bool old, bool newValue)
     {
         UpdateVisual(newValue);
     }
 
-    void UpdateVisual(bool collected)
+    public void UpdateVisual(bool collected)
     {
         rend.enabled = !collected;
     }
@@ -35,7 +33,17 @@ public class CollectibleItem : NetworkBehaviour
     [Rpc(SendTo.Server)]
     public void CollectServerRpc()
     {
-        if(isCollected.Value) return;
+        if (isCollected.Value) return;
         isCollected.Value = true;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!IsServer) return;
+        if (isCollected.Value) return;
+        if (other.CompareTag("Player"))
+        {
+            this.GetComponent<NetworkObject>().Despawn();
+        }
     }
 }
