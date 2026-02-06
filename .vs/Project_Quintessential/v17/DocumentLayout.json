@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\inaki\\OneDrive\\Desktop\\School\\TRI 3\\Project_Quintessential\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8BF6435A-25E2-5A59-2B88-1114B632D058}|Assembly-CSharp.csproj|C:\\Users\\inaki\\OneDrive\\Desktop\\School\\TRI 3\\Project_Quintessential\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8BF6435A-25E2-5A59-2B88-1114B632D058}|Assembly-CSharp.csproj|c:\\users\\inaki\\onedrive\\desktop\\school\\tri 3\\project_quintessential\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BF6435A-25E2-5A59-2B88-1114B632D058}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8BF6435A-25E2-5A59-2B88-1114B632D058}|Assembly-CSharp.csproj|c:\\users\\inaki\\onedrive\\desktop\\school\\tri 3\\project_quintessential\\assets\\scripts\\network ui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8BF6435A-25E2-5A59-2B88-1114B632D058}|Assembly-CSharp.csproj|c:\\users\\inaki\\onedrive\\desktop\\school\\tri 3\\project_quintessential\\assets\\scripts\\playerapperence.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BF6435A-25E2-5A59-2B88-1114B632D058}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerapperence.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BF6435A-25E2-5A59-2B88-1114B632D058}|Assembly-CSharp.csproj|C:\\Users\\inaki\\OneDrive\\Desktop\\School\\TRI 3\\Project_Quintessential\\assets\\scripts\\network ui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BF6435A-25E2-5A59-2B88-1114B632D058}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\network ui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -26,11 +30,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "PlayerApperence.cs",
+              "DocumentMoniker": "C:\\Users\\inaki\\OneDrive\\Desktop\\School\\TRI 3\\Project_Quintessential\\Assets\\Scripts\\PlayerApperence.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerApperence.cs",
+              "ToolTip": "C:\\Users\\inaki\\OneDrive\\Desktop\\School\\TRI 3\\Project_Quintessential\\Assets\\Scripts\\PlayerApperence.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerApperence.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T03:19:55.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Network UI.cs",
               "DocumentMoniker": "C:\\Users\\inaki\\OneDrive\\Desktop\\School\\TRI 3\\Project_Quintessential\\Assets\\Scripts\\Network UI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Network UI.cs",
@@ -38,8 +55,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Network UI.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-06T03:08:52.941Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-06T03:08:52.941Z"
             },
             {
               "$type": "Document",
@@ -49,14 +65,14 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement.cs",
               "ToolTip": "C:\\Users\\inaki\\OneDrive\\Desktop\\School\\TRI 3\\Project_Quintessential\\Assets\\Scripts\\PlayerMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerMovement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-06T03:08:40.933Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "CollectibleItem.cs",
               "DocumentMoniker": "C:\\Users\\inaki\\OneDrive\\Desktop\\School\\TRI 3\\Project_Quintessential\\Assets\\Scripts\\CollectibleItem.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CollectibleItem.cs",
@@ -68,7 +84,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Spawner.cs",
               "DocumentMoniker": "C:\\Users\\inaki\\OneDrive\\Desktop\\School\\TRI 3\\Project_Quintessential\\Assets\\Scripts\\Spawner.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Spawner.cs",
