@@ -1,5 +1,7 @@
-using UnityEngine;
 using Unity.Netcode;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using static UnityEditor.PlayerSettings;
 
 public class PlayerMovement : NetworkBehaviour
 {
@@ -8,7 +10,6 @@ public class PlayerMovement : NetworkBehaviour
     private void Update()
     {
         if (!IsOwner) return;
-
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
@@ -20,8 +21,8 @@ public class PlayerMovement : NetworkBehaviour
         {
             TryToCollect();
         }
+    
     }
-
     [ServerRpc]
     void MoveServerRPC(Vector3 move)
     {
@@ -46,5 +47,31 @@ public class PlayerMovement : NetworkBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, 1f);
+    }
+
+    private void OnSceneLoaded(ulong clientID, string sceneName, LoadSceneMode mode)
+    {
+        if (sceneName == "SampleScene")
+        {
+            AsignarReferencia();
+        }
+    }
+
+    void AsignarReferencia()
+    {
+       var aux = this.gameObject.GetComponent<RequestSpawn>();
+        aux.enabled = true;
+        aux.spawner = GameObject.Find("Spawner").GetComponent<Spawner>();
+        aux.pos = GameObject.Find("Spawner").transform;
+    }
+
+    private void OnEnable()
+    {
+        NetworkManager.Singleton.SceneManager.OnLoadComplete += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        NetworkManager.Singleton.SceneManager.OnLoadComplete -= OnSceneLoaded;
     }
 }

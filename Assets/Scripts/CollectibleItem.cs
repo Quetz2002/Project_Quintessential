@@ -1,12 +1,15 @@
 using UnityEngine;
 using Unity.Netcode;
+using Unity.VisualScripting;
 
 public class CollectibleItem : NetworkBehaviour
 {
-
     private Renderer rend;
 
-    public NetworkVariable<bool> isCollected = new NetworkVariable<bool>(false, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
+    public NetworkVariable<bool> isCollected = new NetworkVariable<bool>(
+        false,
+        NetworkVariableReadPermission.Everyone,
+        NetworkVariableWritePermission.Server);
 
     private void Awake()
     {
@@ -17,15 +20,15 @@ public class CollectibleItem : NetworkBehaviour
     {
         UpdateVisual(isCollected.Value);
 
-        isCollected.OnValueChanged += OnCollectedChanged;
+        isCollected.OnValueChanged += OnCollectedChange;
     }
 
-    void OnCollectedChanged(bool old, bool newValue)
+    void OnCollectedChange(bool old, bool newValue)
     {
         UpdateVisual(newValue);
     }
 
-    public void UpdateVisual(bool collected)
+    void UpdateVisual(bool collected)
     {
         rend.enabled = !collected;
     }
@@ -33,17 +36,36 @@ public class CollectibleItem : NetworkBehaviour
     [Rpc(SendTo.Server)]
     public void CollectServerRpc()
     {
-        if (isCollected.Value) return;
+        if(isCollected.Value) return;
         isCollected.Value = true;
+
+        ulong playerID = this.GetComponent<NetworkObject>().OwnerClientId;
+        ShowCollectedMessageClientRpc(playerID);
+
+        this.GetComponent<NetworkObject>().Despawn();
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (!IsServer) return;
-        if (isCollected.Value) return;
-        if (other.CompareTag("Player"))
+
+        if(isCollected.Value) return;
+
+        if(other.CompareTag("Player"))
         {
-            this.GetComponent<NetworkObject>().Despawn();
+            CollectServerRpc();
+            //Destroy(this.gameObject);
+            
+           
+        }
+    }
+    [ClientRpc]
+    private void ShowCollectedMessageClientRpc(ulong playerID)
+    {
+        if (UIMessageManager.instance != null)
+        {
+            UIMessageManager.instance.ShowMessage($"El jugador {playerID} recolectó un objeto");
         }
     }
 }

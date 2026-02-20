@@ -1,20 +1,27 @@
-using Unity.Netcode;
 using UnityEngine;
+using Unity.Netcode;
 
 public class Spawner : NetworkBehaviour
 {
-    [SerializeField]
-    private GameObject _item;
 
-    public override void OnNetworkSpawn()
+    [SerializeField] private GameObject _spawner;
+
+    public override void OnNetworkDespawn()
     {
         if (!IsServer) return;
-        SpawnObject();
+
+        Generate();
     }
 
-    public void SpawnObject()
+    // Update is called once per frame
+    void Update()
     {
-        GameObject obj = Instantiate(_item, transform.position, Quaternion.identity);
-        obj.GetComponent<NetworkObject>().Spawn();
+        
+    }
+
+   public void Generate () 
+    {
+        GameObject gameObject = Instantiate(_spawner);
+        gameObject.GetComponent<NetworkObject>().Spawn();
     }
 }
