@@ -4,9 +4,9 @@ using Unity.Netcode;
 public class PlayerApperence : NetworkBehaviour
 {
         private Renderer renderer;
-    private NetworkVariable<Color> playerColor 
+    public NetworkVariable<Color> playerColor 
         = new NetworkVariable<Color>(
-            Color.cyan,
+            Color.gray,
             NetworkVariableReadPermission.Everyone,
             NetworkVariableWritePermission.Server);
 
