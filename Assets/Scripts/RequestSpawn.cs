@@ -25,7 +25,7 @@ public class RequestSpawn : NetworkBehaviour
     [ServerRpc]
     void RequestSpawnServerRpc()
     {
-        spawner.Generate();
+        spawner.SpawnObject();
     }
 
     private void OnSceneLoaded(ulong clientID, string sceneName, LoadSceneMode mode)

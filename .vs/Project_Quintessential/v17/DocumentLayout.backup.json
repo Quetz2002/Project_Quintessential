@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\ALUMNOS\\Documents\\GitHub\\Project_Quintessential\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8BF6435A-25E2-5A59-2B88-1114B632D058}|Assembly-CSharp.csproj|c:\\users\\alumnos\\documents\\github\\project_quintessential\\assets\\scripts\\lobby.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BF6435A-25E2-5A59-2B88-1114B632D058}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\lobby.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ALUMNOS\\Documents\\GitHub\\Project_Quintessential\\Library\\PackageCache\\com.unity.netcode.gameobjects@f34cb3e9a59a\\Runtime\\Core\\NetworkManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.netcode.gameobjects@f34cb3e9a59a\\Runtime\\Core\\NetworkManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8BF6435A-25E2-5A59-2B88-1114B632D058}|Assembly-CSharp.csproj|c:\\users\\alumnos\\documents\\github\\project_quintessential\\assets\\scripts\\backendmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8BF6435A-25E2-5A59-2B88-1114B632D058}|Assembly-CSharp.csproj|C:\\Users\\ALUMNOS\\Documents\\GitHub\\Project_Quintessential\\assets\\scripts\\backendmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BF6435A-25E2-5A59-2B88-1114B632D058}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\backendmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -27,6 +31,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Lobby.cs",
+              "DocumentMoniker": "C:\\Users\\ALUMNOS\\Documents\\GitHub\\Project_Quintessential\\Assets\\Scripts\\Lobby.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Lobby.cs",
+              "ToolTip": "C:\\Users\\ALUMNOS\\Documents\\GitHub\\Project_Quintessential\\Assets\\Scripts\\Lobby.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Lobby.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T13:47:42.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "NetworkManager.cs",
               "DocumentMoniker": "C:\\Users\\ALUMNOS\\Documents\\GitHub\\Project_Quintessential\\Library\\PackageCache\\com.unity.netcode.gameobjects@f34cb3e9a59a\\Runtime\\Core\\NetworkManager.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.netcode.gameobjects@f34cb3e9a59a\\Runtime\\Core\\NetworkManager.cs",
@@ -39,7 +56,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "BackendManager.cs",
               "DocumentMoniker": "C:\\Users\\ALUMNOS\\Documents\\GitHub\\Project_Quintessential\\Assets\\Scripts\\BackendManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\BackendManager.cs",
@@ -47,8 +64,7 @@
               "RelativeToolTip": "Assets\\Scripts\\BackendManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T21:30:44.383Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-11T21:30:44.383Z"
             }
           ]
         }
